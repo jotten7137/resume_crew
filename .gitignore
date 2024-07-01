@@ -1,2 +1,5 @@
 .env
 __pycache__/
+src/resume/markdowns/resume.md
+src/resume/markdowns/tailored_resume.md
+src/resume/markdowns/interview_materials.md
