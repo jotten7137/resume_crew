@@ -8,17 +8,9 @@ from langchain_community.document_loaders import WebBaseLoader
 from crewai_tools import (
   FileReadTool,
   ScrapeWebsiteTool,
-#   MDXSearchTool,
+  MDXSearchTool,
   SerperDevTool
 )
-
-search_tool = SerperDevTool()
-scrape_tool = ScrapeWebsiteTool()
-# read_resume = FileReadTool(file_path='fake_resume.md')
-# semantic_search_resume = MDXSearchTool(mdx='./fake_resume.md')
-
-
-
 
 class SearchTools:
   
@@ -27,24 +19,36 @@ class SearchTools:
     """
     Use this tool to search the internet for information. This tools returns 5 results from Google search engine.
     """
-    return SerperDevTool()
+    serper_tool = SerperDevTool()
+    return serper_tool.run(query)
   
   @tool('scrape tool')
   def scrape_tool(query: str) -> str:
     """
     Use this tool to search Instagram. This tools returns 5 results from Instagram pages.
     """
-    return ScrapeWebsiteTool()
+    scrape_tool = ScrapeWebsiteTool()
+    scrape_tool.set_query(query)
+    return scrape_tool.run()
   
-  # @tool('read resume')
-  # def read_resume(query:str) -> str:
-  #   read_resume = FileReadTool(file_path='./markdowns/resume.md')
-  #   return read_resume
+  @tool('read resume')
+  def read_resume():
+    """
+    Use this tool to search Instagram. This tools returns 5 results from Instagram pages.
+    """
+  #def read_resume(query:str) -> str:
+    # read_resume = FileReadTool(file_path='src/resume/markdowns/resume.md')
+    return FileReadTool(file_path='src/resume/markdowns/resume.md')
 
-   # @tool('semantic search resume')
+  @tool('semantic search resume')
+  def semantic_search_resume(query: str) -> str:
+    """
+    Use this tool to search Instagram. This tools returns 5 results from Instagram pages.
+    """
   # def semantic_search_resume(query:str) -> str:
-  #   semantic_search_resume = MDXSearchTool(mdx='./markdowns/resume.md')
-  #   return semantic_search_resume
+    # semantic_search_resume = MDXSearchTool(mdx='src/resume/markdowns/resume.md')
+    search_tool = MDXSearchTool(mdx='src/resume/markdowns/resume.md')
+    return search_tool.search(query)
   
   
 if __name__ == "__main__":

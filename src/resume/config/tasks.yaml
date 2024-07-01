@@ -18,9 +18,10 @@ resume_strategy:
   description: >
     Using the profile and job requirements obtained from previous tasks, tailor the resume to highlight the most relevant areas. 
     Employ tools to adjust and enhance the resume content. 
-    Make sure this is the best resume even but don't make up any information. 
+    Make sure this is the best resume ever. 
+    Don't make up any information. 
     Update every section, inlcuding the initial summary, work experience, skills, and education. 
-    All to better reflrect the candidates abilities and how it matches the job posting.
+    All to better reflect the candidates abilities and how it matches the job posting.
   
   expected_output: >
     An updated resume that effectively highlights the candidate's qualifications and experiences relevant to the job.

@@ -12,13 +12,13 @@ github_input = input("Enter your github account [i.e. https://github.com/xxxxx]:
 #'github_url': 'https://github.com/jotten7137',
 
 writeup_input = input("Enter a brief writeup about your background, experience, speciality, skills, education, etc.: ")
-# 'personal_writeup': """Noah is an accomplished Software
-#         Engineering Leader with 18 years of experience, specializing in
-#         managing remote and in-office teams, and expert in multiple
-#         programming languages and frameworks. He holds an MBA and a strong
-#         background in AI and data science. Noah has successfully led
-#         major tech initiatives and startups, proving his ability to drive
-#         innovation and growth in the tech industry. Ideal for leadership
+# 'personal_writeup': """Joshua is an accomplished Data Scientist and
+#         Engineering Leader with 10 years of experience, specializing in
+#         managing remote and in-office teams, and proficient in multiple
+#         programming languages and frameworks. He holds an masters in data science and a strong
+#         background in AI and machine learning. Joshua has successfully led
+#         tech initiatives, proving his ability to drive
+#         innovation and growth in the multiple industries. Ideal for leadership
 #         roles that require a strategic and innovative approach."""
 
 def run():

@@ -31,13 +31,23 @@ class ResumeCrew:
     def profiler(self) -> Agent:
         return Agent(
             config=self.agents_config["profiler"],
-
+            tools=[
+              SearchTools.search_tool,
+              SearchTools.scrape_tool,
+            ],
+            verbose=True,
         )
     
     @agent
     def resume_strategist(self) -> Agent:
         return Agent(
             config=self.agents_config["resume_strategist"],
+            tools = [
+              SearchTools.search_tool,
+              SearchTools.scrape_tool,
+              SearchTools.read_resume, 
+              SearchTools.semantic_search_resume],
+            verbose=True,
             
         )
     
@@ -45,7 +55,12 @@ class ResumeCrew:
     def interview_preparer(self) -> Agent:
         return Agent(
             config=self.agents_config["interview_preparer"],
-            
+            tools = [
+              SearchTools.search_tool,
+              SearchTools.scrape_tool,
+              SearchTools.read_resume, 
+              SearchTools.semantic_search_resume],
+            verbose=True,
         )
     
     #Tasks
@@ -87,6 +102,6 @@ class ResumeCrew:
             agents=self.agents,  # Automatically created by the @agent decorator
             tasks=self.tasks,  # Automatically created by the @task decorator
             process=Process.sequential,
-            verbose=2,
+            verbose=True,
             # process=Process.hierarchical, # In case you wanna use that instead https://docs.crewai.com/how-to/Hierarchical/
         )
