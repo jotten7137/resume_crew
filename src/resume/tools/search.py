@@ -25,7 +25,7 @@ class SearchTools:
   @tool('scrape tool')
   def scrape_tool(query: str) -> str:
     """
-    Use this tool to search Instagram. This tools returns 5 results from Instagram pages.
+    Use this tool to search webpages. This tools returns 5 results from webpage query.
     """
     scrape_tool = ScrapeWebsiteTool()
     scrape_tool.set_query(query)
@@ -34,7 +34,7 @@ class SearchTools:
   @tool('read resume')
   def read_resume():
     """
-    Use this tool to search Instagram. This tools returns 5 results from Instagram pages.
+    Use this tool to read the resume. This tools returns resume for prompt.
     """
   #def read_resume(query:str) -> str:
     # read_resume = FileReadTool(file_path='src/resume/markdowns/resume.md')
@@ -43,7 +43,8 @@ class SearchTools:
   @tool('semantic search resume')
   def semantic_search_resume(query: str) -> str:
     """
-    Use this tool to search Instagram. This tools returns 5 results from Instagram pages.
+    Use this tool to search webpages based on resume. This tools returns 5 results from webpage query.
+    Useful? - may delete later
     """
   # def semantic_search_resume(query:str) -> str:
     # semantic_search_resume = MDXSearchTool(mdx='src/resume/markdowns/resume.md')
