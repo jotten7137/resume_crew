@@ -8,6 +8,9 @@ from crewai_tools import (
 )
 job_input = input('Enter target job application url here: ')
 #'job_posting_url': 'https://jobs.lever.co/AIFund/6c82e23e-d954-4dd8-a734-c0c2c5ee00f1?lever-origin=applied&lever-source%5B%5D=AI+Fund',
+
+linkedin_input = input("Enter your linkedin account [i.e. https://www.linkedin.com/in/xxxxx]")
+
 github_input = input("Enter your github account [i.e. https://github.com/xxxxx]: ")
 #'github_url': 'https://github.com/jotten7137',
 
@@ -28,6 +31,7 @@ def run():
         'read_resume' : FileReadTool(file_path='src/resume/markdowns//markdowns/resume.md'),
         'semantic_search_resume' : MDXSearchTool(mdx='src/resume/markdowns/resume.md'),
         'job_posting_url': job_input,
+        'linkedin_url':"https://linkedin.com/in/" + linkedin_input,
         'github_url': "https://github.com/" + github_input,
         'personal_writeup': writeup_input
         }

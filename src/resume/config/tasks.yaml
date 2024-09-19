@@ -8,7 +8,7 @@ research:
 
 profile:
   description: >
-    Compile a detailed personal and professional profile using the GitHub ({github_url}) URLs, and personal write-up ({personal_writeup}). 
+    Compile a detailed personal and professional profile using only the provided Linkedin URL ({linkedin_url}), GitHub URL ({github_url}), and personal write-up ({personal_writeup}). 
     Utilize tools to extract and synthesize information from these sources.
 
   expected_output: >
